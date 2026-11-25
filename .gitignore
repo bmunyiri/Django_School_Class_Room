@@ -1,0 +1,111 @@
+# ===================================
+# Django Specific
+# ===================================
+# Local development database
+db.sqlite3
+db.sqlite3-journal
+
+# Local settings containing secrets (SECRET_KEY, DB passwords, etc.)
+local_settings.py
+*.env
+
+# Media files (user uploads)
+media/
+
+# Static files collected by `collectstatic`
+# Note: Usually generated during deployment, not committed
+staticfiles/
+
+# Logs
+*.log
+logs/
+
+# ===================================
+# Python
+# ===================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# ===================================
+# Environments
+# ===================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ===================================
+# IDE / Editor
+# ===================================
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+
+# Vim
+*.swp
+*.swo
+
+# ===================================
+# Operating System
+# ===================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
