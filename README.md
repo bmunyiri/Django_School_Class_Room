@@ -1,4 +1,4 @@
-# Django School Class Room
+# Django School - Class Room  - Management System
 
 A Django-based web application for managing school classrooms, students, and classes.
 
@@ -6,7 +6,17 @@ A Django-based web application for managing school classrooms, students, and cla
 
 - Manage students and their details.
 - Organize classes (e.g., `class1`).
--
+
+## Proof of Concept
+
+Here is a screenshot of the Django `index.html` successfully auto-generating a table for the Student Object:
+
+![Django Frontend Screenshot](screenshots/students_object_render.png)
+
+Here is a screenshot of the Django Admin panel successfully auto-generating an admission number:
+
+![Django Admin Screenshot](screenshots/new-students_instance.png)
+
 
 ## 🛠️ Tech Stack
 
