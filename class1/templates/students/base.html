@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}School Portal{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>My School Header</h1>
+        <nav>Home | About | Contact</nav>
+    </header>
+
+    <main>
+        <!-- THIS is the hole where index.html will inject its content -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 School Management System</p>
+    </footer>
+</body>
+
+</html>

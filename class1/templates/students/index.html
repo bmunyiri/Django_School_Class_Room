@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Information and resources for Class 1 students.">
-    <title>Class-1</title>
-</head>
-<body>
-     {% block content %}
-        <h1>{{ title }}</h1>
-        <p>Welcome to the Class 1 student portal!</p>
-        <h2>Student Information</h2>    
-        <table>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Admission Number</th>
-                <th>Email</th>
-            </tr>
-            {% for student in students %}
-            <tr>
-                <td>{{ student.first_name }}</td>
-                <td>{{ student.last_name }}</td>
-                <td>{{ student.admission_number }}</td>
-                <td>{{ student.email }}</td>
-            </tr>
-            {% endfor %}
-        </table >
-     {% endblock %} 
-</body>
-</html>
+    {% extends 'students/base.html' %}
+    
+    {% block title %}Class 1 Students{% endblock %}
+    
+    {% block content %}
+    <p>Welcome to the Class 1 student portal!</p>
+    <h2>Student Information</h2>
+    <ul>
+        {% for student in students %}
+        <li>First Name: {{ student.first_name }}</li>
+        <li>Last Name: {{ student.last_name }}</li>
+        <li>Admission Number: {{ student.admission_number }}</li>
+        <li>Email: {{ student.email }}</li>
+        <hr> <!-- Just to separate the students visually -->
+        {% endfor %}
+    </ul>
+    {% endblock %}
