@@ -35,3 +35,20 @@ class Student(models.Model):
         return today.year - self.date_of_birth.year - (
             (today.month, today.day) < (self.date_of_birth.month, self.date_of_birth.day)
         )
+
+    def save(self, *args, **kwargs):
+        # Only generate a number if this is a NEW student (no number yet)
+        if not self.admission_number:
+            # Get the last student to find the highest number
+            last_student = Student.objects.all().order_by('id').last()
+            
+            if not last_student:
+                # If it's the very first student in the database
+                self.admission_number = 'ADM001'
+            else:
+                # Extract the number part, add 1, and format it with leading zeros
+                last_id = last_student.id
+                new_id = last_id + 1
+                self.admission_number = f'ADM{new_id:03d}' # 03d pads with zeros (e.g., ADM002)
+                
+        super().save(*args, **kwargs) # Call the real save method

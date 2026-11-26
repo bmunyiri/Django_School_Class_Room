@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Student
 
-# Register your models here.
-admin.site.register(Student)
+@admin.register(Student)
+class StudentAdmin(admin.ModelAdmin):
+    # Make sure it's a tuple (notice the comma at the end!)
+    readonly_fields = ('admission_number',) 
